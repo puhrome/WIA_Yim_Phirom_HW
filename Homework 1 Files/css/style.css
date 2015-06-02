@@ -1,0 +1,52 @@
+/* CSS STYLING */
+
+body {
+    width: 96%;
+    padding: 10%;
+}
+.container {
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ==== DIV Styling ==== */
+
+#rectangles {
+
+}
+
+#circle {
+    background: #ffffff;
+
+}
+
+#path {
+    background: #4d4d4d;
+
+
+}
+
+#curves {
+    background: #ffffff;
+
+}
+
+#text {
+    background: #4d4d4d;
+
+}
+
+#image {
+    background: #ffffff;
+
+}
+
+#combo {
+    background: #4d4d4d;
+
+}
+
