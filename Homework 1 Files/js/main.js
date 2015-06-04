@@ -57,7 +57,7 @@ window.onload = function() {
             //set style
 
             //set the fill style
-            ctx.fillStyle = 'blue';
+            ctx.fillStyle = "#58c0ff";
             ctx.fillRect(0, 0, 50, 100);
 
             //set stroke style
@@ -85,7 +85,7 @@ window.onload = function() {
             var ctx2 = theCanvas2.getContext("2d");
             if (ctx2) {
 
-                ctx2.fillStyle = "red";
+                ctx2.fillStyle = "rgba(204,62,62, 0.5)";
                 ctx2.strokeStyle = "black";
                 ctx2.lineWidth = 1;
 
@@ -98,8 +98,6 @@ window.onload = function() {
                 ctx2.arc(50, 50, 30, 0, 2 * Math.PI, false);
                 ctx2.fill();
                 ctx2.stroke();
-
-
             }
         }
     /*******************************************
@@ -120,9 +118,8 @@ window.onload = function() {
         var ctx3 = theCanvas3.getContext("2d");
         if(ctx3){
             //start path
-            //move point
             ctx3.beginPath();
-
+            //move point
             ctx3.moveTo(100, 100); //100 right 100 down
             ctx3.moveTo(200, 70); //top right point
             ctx3.lineTo(140, 120); //right peak
@@ -139,10 +136,8 @@ window.onload = function() {
             //close path
             ctx3.closePath();
             ctx3.stroke();
-
-        }
-
-    }
+        } //end if ctx3 works
+    } //end if context of theCanvas3 works
 
 
     /*******************************************
@@ -166,15 +161,19 @@ window.onload = function() {
         var ctx4 = theCanvas4.getContext("2d");
 
         if(ctx4){
+        //draw bezier curve
+        //begin path
         ctx4.beginPath();
+        //move path
         ctx4.moveTo(87, 296);
+        //start of bezier curve
         ctx4.bezierCurveTo(128, 259, 162, 246, 198, 301);
         ctx4.bezierCurveTo(219, 333, 222, 196, 335, 303);
         ctx4.bezierCurveTo(359, 326, 339, 212, 439, 304);
         ctx4.bezierCurveTo(457, 321, 278, 3, 88, 296);
         ctx4.stroke();
-        }
-    }
+        }// end if ctx4 works
+    } // end if context for theCanvas4 works
 
     /*******************************************
      PART 5
@@ -189,10 +188,11 @@ window.onload = function() {
     var theCanvas5 = document.getElementById("Canvas5");
     if (theCanvas5 && theCanvas5.getContext) {
         var ctx5 = theCanvas5.getContext("2d");
-
-        ctx5.font = "50px Helvetica";
-        ctx5.strokeText("Why, hello!", 5, 50);
-    }
+        if(ctx5) {
+        ctx5.font = "50px Helvetica"; //set font size and style
+        ctx5.strokeText("Why, hello!", 5, 50); // set string, and x,y position
+        } // end of ctx5
+    } // end of if for theCanvas5 context
 
         /*******************************************
      PART 6
@@ -243,42 +243,71 @@ window.onload = function() {
 
 // Draw scene here
     var theCanvas7 = document.getElementById('Canvas7');
+
     if(theCanvas7 && theCanvas7.getContext){
 
         var ctx7 = theCanvas7.getContext("2d");
+
         if(ctx7){
-
-        ctx7.rect(20, 40, 200, 300);
-        ctx7.shadowColor = '#999';
-        ctx7.shadowBlur = 20;
-        ctx7.shadowOffsetX = 15;
-        ctx7.shadowOffsetY = 15;
-        ctx7.fill();
-        ctx7.fillRect = "red";
-
-
-            var rotation = 0;
-
-            var width = 50;
-            var height = 50;
-
-            ctx7.translate(theCanvas7.width/2, theCanvas7.height/2);
-
-            setInterval(function(){
-
-                rotation +=8;
-
-                ctx7.clearRect(-100, -100, theCanvas7.width, theCanvas7.height);
-
-                ctx7.rotate(rotation * (Math.PI /180));
-
-            }, 1000);
-
+            //set style for face/circle
+            ctx7.fillStyle = "yellow";
             ctx7.strokeStyle = "black";
+            ctx7.lineWidth = 1;
+
+            //Full Circle
+            var degrees = 180;
+            var radius = 20;
+
+            //start path
+            ctx7.beginPath();
+            //context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+            //draw
+            ctx7.arc(250, 110, 100, 0, 2 * Math.PI, false);
+            ctx7.fill();
             ctx7.stroke();
+            ctx7.closePath();
+
+            //draw rectangles/eyes
+            ctx7.beginPath();
+            //draw rectangles
+            ctx7.rect(210, 70, 20, 20);
+            ctx7.rect(270, 70, 20, 20);
+
+            //set style
+            ctx7.fillRect = "red";
+            ctx7.lineWidth = 1;
 
 
-        }
-    }
+            ctx7.stroke();
+            ctx7.closePath();
+
+            //draw circle/nose
+            ctx7.beginPath();
+            //draw circle
+            //context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+            ctx7.arc(250, 120, 10, 0, 2 * Math.PI, false);
+            //set style
+            ctx7.stroke();
+            ctx7.closePath();
+
+            //draw path/mouth
+            ctx7.beginPath();
+            //set style and position
+            ctx7.moveTo(200, 150);
+            ctx7.lineTo(250,160);
+            ctx7.stroke();
+            ctx7.closePath();
+
+            //draw text rendering
+            ctx7.font = "bold 30px serif";
+            ctx7.lineWidth = 1;
+            ctx7.shadowColor = 'rgba(200, 0, 0, 0.7)';
+            ctx7.shadowOffsetX = 2;
+            ctx7.shadowOffsetY = 2;
+            ctx7.shadowBlur = 2;
+            ctx7.fillText("HTML5 Canvas is Fun!", 100, 300);
+        } //end of ctx7 if statement
+    } //end of theCanvas7 if context
+
 
 }; //end of function
