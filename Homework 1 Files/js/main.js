@@ -22,6 +22,10 @@ FILE SETUP
 // Setup the call to that canvas and get it's 2d context
 //Use Modernizr to verify that your browser supports canvas, include a fallback message
 
+*/
+
+//Modernizr Code to test browser
+if(Modernizr.canvas){
 
 /*******************************************
 PART 1
@@ -33,6 +37,9 @@ Set the stroke color to black and the dimension of the stroke are the same as th
 
 Reminder - set the style first then draw.
 ********************************************/
+
+
+
 
 //Draw Rectangle here
 window.onload = function() {
@@ -311,3 +318,10 @@ window.onload = function() {
 
 
 }; //end of function
+
+}else{
+    //Use something else
+    //Polyfill would go here
+}
+
+console.log(Modernizr);

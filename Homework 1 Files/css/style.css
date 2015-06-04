@@ -5,47 +5,23 @@ body {
     padding: 5%;
 }
 .content {
-    border: dashed 1px #4d4d4d;
+    border: solid 2px #4d4d4d;
     padding: 5%;
 }
 
 h1 {
+    font-family: "Arial", Helvetica, san-serif;
+    letter-spacing: 2px;
     font-size: 3em;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 5%;
 }
 h2 {
-    font-size: 2em;
-}
-/* ==== DIV Styling ==== */
-
-#rectangles {
-
+    font-family: "Helvetica", Arial, san-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-#circle {
-
-}
-
-#path {
-
-
-}
-
-#curves {
-
-}
-
-#text {
-
-}
-
-#image {
-
-}
-
-#combo {
-
-}
 
