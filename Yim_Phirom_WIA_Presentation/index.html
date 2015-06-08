@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fullPage.js One Page Scroll Sites</title>
+    <!--Link CSS styling-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--Link for Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>    <!-- Script for Internet Explorer-->
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
+    <!--Script for Jquery and JS -->
+    <script type="text/javascript" src="js/modernizr.custom.56594.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <!-- Script for fullPage.js-->
+    <script type="text/javascript" src="js/libs/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/libs/examples.js"></script>
+    <!--Script to Run before page loads with Section Color-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ["#fff","#fff", "#fff", "#fff"],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                scrollingSpeed: 1000
+            });
+        });
+    </script>
+</head>
+<body>
+<!--Navigation Menu-->
+<ul id="menu">
+    <li data-menuanchor="firstPage"><a href="#firstPage">Intro</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Photo Slider</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Video</a></li>
+    <li data-menuanchor="4thpage"><a href="#4thpage">Links</a></li>
+</ul>
+<!--End Navigation-->
+<!--Start of fullPage.js Demo-->
+<div id="fullpage">
+    <!--Start of First Section-->
+    <div class="section " id="section0">
+        <h1>fullPage.js</h1>
+        <br>
+        <p>by Alvaro Trigo</p>
+        <br>
+        <p>Create Beautiful Fullscreen Scrolling Websites</p>
+    </div>
+    <!--Slide Demo-->
+    <div class="section" id="section1">
+        <div class="slide">
+            <div class="intro">
+                    <h1>Create Sliders</h1>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="intro">
+                <img src="images/Campfire.jpg" height="100%" width="100%" alt="campfire" />
+            </div>
+        </div>
+        <div class="slide">
+            <div class="intro">
+                <img src="images/SW_Chelsea Francis-2.jpg" height="100%" width="100%" alt="Cool" />
+            </div>
+        </div>
+        <div class="slide">
+            <div class="intro">
+                <img src="images/SW_Zack Minor-2.jpg" height="100%" width="100%" alt="Compatible" />
+            <div class="layer">
+                <h1>Compatible</h1>
+            </div>
+            </div>
+        </div>
+        <div class="slide">
+                <p>Images are Royalty Free Courtesy of <a href="https://www.snapwi.re/">Snapwire</a></p>
+        </div>
+    </div>
+    <!--End of Slide Demo-->
+    <!--Start of Section 2-->
+    <div class="section" id="section2">
+        <div class="intro">
+            <video autoplay loop muted controls="false" id="myVideo">
+                <source src="images/Pier.mp4" type="video/mp4">
+            </video>
+            <p>Video is Courtesy of <a href="http://www.lifeofvids.com/">Life of Vids</a></p>
+        </div>
+    </div>     <!--End of Section 2-->
+    <!--Start of Section 3-->
+    <div class="section" id="section3">
+        <div class="intro">
+            <h1>Links</h1>
+            <a href="https://github.com/alvarotrigo/fullPage.js">GitHub</a>
+            <a href="www.snapwi.re">Snapwire</a>
+            <a href="www.lifeofvids.com">Life of Vids</a>
+                <br /><br /><br /><br /><br /><br />
+        </div>
+    </div>         <!--End of Section 3-->
+
+</div> <!-- End of fullPage.js Demo-->
+
+</body>
+</html>
