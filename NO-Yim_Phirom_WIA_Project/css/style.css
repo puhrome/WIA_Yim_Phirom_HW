@@ -1,93 +1,278 @@
-/* Main ---------------------------------*/
-.container {
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
 }
-
-
-/* Video ---------------------------------*/
-
-
-
-/* Skills ---------------------------------*/
-.skills{
-    background:#F7F7F7;
-    color:#474d5d;
+a{
+    text-decoration:none;
+    color: #ffffff;
 }
 
-.skills .heading p{
-    padding-bottom:41px;
+a:hover {
+    color: #4d4d4d;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+    font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+
 }
 
-.skills p{
-    color:#474d5d;
+h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #333333;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
 }
 
-.skills .skillsArea{
-    padding:0px;
+/* Custom CSS
+ * --------------------------------------- */
+body{
+    color: #333;
+    color: rgba(0,0,0,0.5);
 }
-.skills .skills{
-    margin:0 auto;
-    margin-bottom:23px;
-    text-align:center;
-    padding:0px;
-    float:none;
-}
-.skills .skills p{
-    color:#84868d;
-    font-size:13px;
-    line-height:18px;
-    text-align:center;
-}
-.skills .skills img{
-    margin:0 auto;
-    margin-bottom:33px;
-    width:100%;
-    max-width:152px;
-}
-
-.skills .skills h4{
-    font-weight:700;
-    text-transform:uppercase;
-}
-
-.skilBg{
-    background:url(../img/skills.png) no-repeat 0 0;
-}
-
-.chart {
+.wrap{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     position: relative;
-    display: inline-block;
-    width: 152px;
-    height: 152px;
-    margin-bottom: 26px;
+}
+h1{
+    font-size: 6em;
+}
+p{
+    font-size: 2em;
+}
+
+.section{
+    text-align:center;
+}
+#menu li {
+    text-transform: uppercase;
+    display:inline-block;
+    margin: 10px 0 0 50px ;
+    color: #ffffff;
+    padding-left: 10px;
+    text-align: center;
+
+}
+#menu li.active{
+    color: #b0813b;
+    text-shadow: #ffffff;
+}
+#menu li a{
+    text-decoration:none;
+}
+#menu li.active a:hover{
+    color: #e3ba0c;
+}
+#menu li:hover{
+}
+#menu li a,
+#menu li.active a{
+    padding: 9px 18px;
+    display:block;
+}
+#menu li.active a{
+    color: #e3ba0c;
+    text-decoration: double;
+}
+#menu{
+    position:fixed;
+    top:0;
+    left: 0;
+    height: 60px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin:0;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+
+/* Sections
+         * --------------------------------------- */
+#section0 img, #section1 img{
+    margin: 0 0 0 0;
+    padding: 0;
+    opacity: .9;
+
+}
+#section2 img{
+    margin: 0;
+    max-width: 100%;
+}
+#section3 img{
+    margin: 0;
+    max-width: 100%;
+}
+
+#myVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: #000; /* in case the video doesn't fit the whole page*/
+    background-image: url("../images/KeyboardingSideView-HD.mp4");
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+    opacity: .8;
+}
+#section0 .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 43%;
+    color: white;
+}
+#section2 h2 {
+    font-size: 3em;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1% 1% 5% 1%;
+}
+#section3 {
+    background: url("../images/Lumber.jpg") 100% 50% no-repeat;
+    opacity: .9;
+}
+#section4 h1 {
+    font-family: "Damion", cursive;
+
+}
+#section4 a {
+    color: #b0813b;
+    text-decoration: none;
+    font-size: 4em;
+}
+
+#section4 a:hover {
+    color: #4d4d4d;
+}
+
+#quote button {
+    padding: 1%;
+    font-size: 1em;
+    background-color: #fff;
+    color: #333333;
+    margin-bottom: 3%;
+    border: 1px solid #b0813b;
+    letter-spacing: 1px;
+}
+
+#quote p {
+    padding-top: 1%;
+    font-family: "Amatic SC", cursive;
+    font-size: 4em;
+    color: #b0813b;
+}
+
+.layer h1 {
+    font-family: "Damion", cursive;
+    font-size: 6em;
+    color: #000;
+}
+/*==JQuery Effects ===*/
+
+.toggler {
+    width: 500px;
+    height: 200px;
+    position: relative;
+}
+#button {
+    padding: .5em 1em;
+    text-decoration: none;
+}
+#effect {
+    width: 240px;
+    height: 135px;
+    padding: 0.4em;
+    position: relative;
+}
+#effect h3 {
+    margin: 0;
+    padding: 0.4em;
     text-align: center;
 }
-
-.chart canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+.ui-effects-transfer {
+    border: 2px dotted gray;
 }
 
-.percent {
+.easyPieChart {
+    width: 100%;
+
+}
+
+ul{
+    margin-bottom: 4em;
+}
+ #skills li {
+     padding: 2%;
+     font-family: arial, helvetica, sans-serif;
+     font-size: .75em;
+ }
+.chart {
     display: inline-block;
-    font-size:21px;
-    color:#474d5d;
-    line-height: 152px;
-    z-index: 2;
+    width: 95px;
+    height: 95px;
+    margin: 0 10px;
+    vertical-align: top;
+    position: relative;
+. box-sizing(border-box);
+    padding-top: 22px;
 }
 
-.percent:after {
-    content: '%';
-    margin-left: 0.1em;
-    font-size: .8em;
+#skills span{
+    display: block;
+    font-size: 3em;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 10%;
+    font-family: arial, helvetica, sans-serif;
+    color: #4d4d4d;
 }
 
-.angular {
-    margin-top: 100px;
-}
-
-.angular .chart {
-    margin-top: 0;
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
